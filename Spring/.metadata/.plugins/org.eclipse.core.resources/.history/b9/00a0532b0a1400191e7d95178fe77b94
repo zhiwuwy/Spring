@@ -1,0 +1,9 @@
+package com.NBdiMAN;
+
+import org.springframework.context.annotation.Configuration;
+
+//当前项目的配置类，好比是applicationContext.xml文件，用一个@Configuration注解来表示这个类是一个配置类
+@Configuration
+public class AppConfig {
+
+}

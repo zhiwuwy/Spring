@@ -1,0 +1,13 @@
+package com.NBdiMAN.dao;
+
+public interface IAccountDAO {
+	
+	/**
+	 * 从指定账户转出多少钱
+	 * @param outId
+	 * @param money
+	 */
+	void transOut(Long outId, int money);
+	
+	void transIn(Long InId, int money);
+}

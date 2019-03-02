@@ -1,0 +1,9 @@
+package com.NBdiMAN;
+
+import org.springframework.context.annotation.Configuration;
+
+//表示数据连接池的配置类
+@Configuration
+public class DataSourceConfig {
+
+}

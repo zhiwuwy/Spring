@@ -1,0 +1,27 @@
+package com.NBdiMAN;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+
+@Configuration  //当前项目的配置类，好比是applicationContext.xml文件，用一个@Configuration注解来表示这个类是一个配置类
+@Import(DataSourceConfig.class) //表示包含其他的配置类
+@ComponentScan      //Ioc注解解析器 如果括号里不写包名，默认当前类所在包及其子包
+@EnableTransactionManagement  //事务注解解析器
+public class AppConfig {
+	
+	//创建事务管理器的Bean
+	@Bean
+	@Autowired
+	public DataSourceTransactionManager createTxManager(DataSource dataSource) {
+		
+		return new DataSourceTransactionManager(dataSource);
+	}  
+}

@@ -1,0 +1,52 @@
+package com.NBdiMAN.tx;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect //贴上Aspect标签表示这是一个做增强的类
+public class TransactionManager {
+	
+	//<aop:pointcut id="txPoint" expression="execution(* com.NBdiMAN.service.*Service.*(..))"/>
+	@Pointcut("execution(* com.NBdiMAN.service.*Service.*(..))")
+	public void txPoint() {
+		
+	}
+	@Before("txPoint()")
+	public void begin(JoinPoint jp) {
+		System.out.println("开始事务");
+	}
+	@AfterReturning("txPoint()")
+	public void commit(JoinPoint jp) {
+		System.out.println("提交事务");
+	}
+	@AfterThrowing("txPoint()")
+	public void rollback(JoinPoint jp, Throwable ex) {
+		System.out.println("回滚事务，异常信息：" + ex.getMessage());
+	}
+	//@After("txPoint()")
+	public void close(JoinPoint jp) {
+		System.out.println("释放资源");
+	}
+	
+	public Object aroundMethod(ProceedingJoinPoint pjp) {
+		Object ret = null;
+		System.out.println("开始事务");
+		try {
+			ret = pjp.proceed();//调用真实对象的方法
+			System.out.println("提交事务");
+		}catch(Throwable e) {
+			System.out.println("回滚事务，异常信息：" + e.getMessage());
+		}finally {
+			System.out.println("释放资源");
+		}
+		return ret; 
+	}
+}

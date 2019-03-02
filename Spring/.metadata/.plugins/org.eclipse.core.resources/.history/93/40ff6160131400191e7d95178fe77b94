@@ -1,0 +1,19 @@
+package com.NBdiMAN;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+
+//当前项目的配置类，好比是applicationContext.xml文件，用一个@Configuration注解来表示这个类是一个配置类
+@Configuration
+@Import(DataSourceConfig.class)
+public class AppConfig {
+	
+	@Bean
+	//创建事务管理器的Bean
+	public DataSourceTransactionManager createTxManager(DataSource dataSource) {
+		
+		return new DataSourceTransactionManager(dataSource);
+	}  
+}

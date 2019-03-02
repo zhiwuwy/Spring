@@ -1,0 +1,12 @@
+package com.NBdiMAN;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+//表示数据连接池的配置类
+@Configuration
+@PropertySource("classpath:db.properties")//使用这个注解可以导入配置文件
+public class DataSourceConfig {
+	
+	//创建连接池对象
+}

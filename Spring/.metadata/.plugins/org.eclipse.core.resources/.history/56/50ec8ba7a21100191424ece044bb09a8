@@ -1,0 +1,17 @@
+package com.NBdiMAN.service.impl;
+
+import com.NBdiMAN.dao.IAccountDAO;
+import com.NBdiMAN.service.IAccountService;
+
+import lombok.Setter;
+
+public class AccountServiceImpl implements IAccountService{
+	
+	@Setter
+	private IAccountDAO acountDAO;
+	
+	public void trans(Long outId, Long inId, int money) {
+		
+	}
+
+}

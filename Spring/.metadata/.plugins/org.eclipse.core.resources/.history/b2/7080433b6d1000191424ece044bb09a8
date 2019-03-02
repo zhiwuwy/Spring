@@ -1,0 +1,14 @@
+package com.NBdiMAN.dao;
+
+import com.NBdiMAN.domain.Employee;
+
+public interface IEmployeeDAO {
+	
+	void save(Employee emp);
+	
+	void update(Employee emp);
+	
+	void delete(Long id);
+	
+	Employee get(Long id);
+}

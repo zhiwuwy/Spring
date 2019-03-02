@@ -1,0 +1,6 @@
+package com.NBdiMAN;
+
+//当前项目的配置类
+public class AppConfig {
+
+}

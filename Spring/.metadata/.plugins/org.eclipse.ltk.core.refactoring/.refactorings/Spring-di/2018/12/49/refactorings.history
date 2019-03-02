@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;App-context.xml&apos; to &apos;Spring-di/src/com.NBdiMAN.di_setter&apos;&#x0D;&#x0A;- Original project: &apos;Spring-di&apos;&#x0D;&#x0A;- Destination element: &apos;Spring-di/src/com.NBdiMAN.di_setter&apos;&#x0D;&#x0A;- Original element: &apos;App-context.xml&apos;" description="Copy file" destination="/src&lt;com.NBdiMAN.di_setter" element1="src/com/NBdiMAN/xml_autowired/App-context.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1544013595041" units="0" version="1.0"/>
+</session>

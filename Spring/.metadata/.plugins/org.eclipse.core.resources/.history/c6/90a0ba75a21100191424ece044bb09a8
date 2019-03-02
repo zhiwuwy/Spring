@@ -1,0 +1,11 @@
+package com.NBdiMAN.service.impl;
+
+import com.NBdiMAN.service.IAccountService;
+
+public class AccountServiceImpl implements IAccountService{
+
+	public void trans(Long outId, Long inId, int money) {
+		
+	}
+
+}

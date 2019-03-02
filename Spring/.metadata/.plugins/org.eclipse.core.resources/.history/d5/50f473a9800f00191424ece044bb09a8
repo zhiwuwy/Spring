@@ -1,0 +1,39 @@
+package com.NBdiMAN.log;
+
+import java.lang.reflect.Method;
+
+import org.springframework.cglib.proxy.Enhancer;
+import org.springframework.cglib.proxy.InvocationHandler;
+
+import lombok.Setter;
+
+public class LogAdvice implements InvocationHandler{
+	
+	@Setter
+	private Object target;
+	
+	@Setter 
+	private LogUtil logUtil;
+
+	public <T> T getProxyObject() {
+		Enhancer enhancer = new Enhancer();
+		enhancer.setSuperclass(target.getClass());
+		enhancer.setCallback(this);
+		return (T) enhancer.create();
+	}
+	
+	@Override
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+		Object ret = null;
+		try {
+			logUtil.writeLog(method.getName());
+			ret = method.invoke(proxy, args);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		return ret;
+	}
+	
+}

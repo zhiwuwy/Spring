@@ -1,0 +1,48 @@
+package com.NBdiMAN.dao.impl;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.NBdiMAN.dao.IEmployeeDAO;
+import com.NBdiMAN.domain.Employee;
+
+public class EmployeeDAOImplByNPJT extends NamedParameterJdbcTemplate implements IEmployeeDAO{
+
+	public EmployeeDAOImplByNPJT(DataSource dataSource) {
+		super(dataSource);
+	}
+
+	@Override
+	public void save(Employee emp) {
+		
+		
+	}
+
+	@Override
+	public void update(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Employee get(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

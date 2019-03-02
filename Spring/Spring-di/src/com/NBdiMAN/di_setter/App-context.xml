@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 属性注入：常量类型 -->	
+	<!-- <bean id="employee1" class="com.NBdiMAN.di_setter.Employee1">
+		<property name="name" value="whyme"></property>
+		<property name="age" value="17"></property>
+		<property name="salary" value="25000"></property>
+	</bean> -->
+	<bean id="employee1" class="com.NBdiMAN.di_setter.Employee1" 
+		p:name="lucy" p:age="18" p:salary="20000"/>
+	
+	<!-- 属性注入：对象类型 -->
+	<bean id="cat1" class="com.NBdiMAN.di_setter.Cat1"/>
+	<bean id="person1" class="com.NBdiMAN.di_setter.Person1">
+		<property name="c1" ref="cat1"/>
+	</bean>
+	
+	<!-- 属性注入：集合类型 -->
+	<bean id="collectionBean1" class="com.NBdiMAN.di_setter.CollectionBean1">
+		<property name="set">
+			<set>
+				<value>set1</value>
+				<value>set2</value>
+			</set>
+		</property>
+		<property name="list">
+			<list>
+				<value>list1</value>
+				<value>list2</value>
+			</list>
+		</property>
+		<property name="array">
+			<array>
+				<value>array1</value>
+				<value>array2</value>
+			</array>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="key1" value="vlaue1"/>
+				<entry key="key2" value="vlaue2"/>
+			</map>
+		</property>
+		<!-- <property name="prop">
+			<props>
+				<prop key="p1">v1</prop>
+				<prop key="p2">v2</prop>
+			</props>
+		</property> -->
+		<property name="prop">
+			<value>
+				p1=v1
+				p2=v2
+				p3=v3
+			</value>
+		</property>
+	</bean>
+</beans>

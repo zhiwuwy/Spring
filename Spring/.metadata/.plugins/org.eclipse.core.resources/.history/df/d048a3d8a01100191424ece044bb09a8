@@ -1,0 +1,5 @@
+package com.NBdiMAN.dao;
+
+public interface IAccountDAO {
+
+}

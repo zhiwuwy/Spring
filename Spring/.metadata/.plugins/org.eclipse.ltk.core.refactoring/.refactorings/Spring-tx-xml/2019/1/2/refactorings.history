@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;Spring-tx-xml&apos;&#x0D;&#x0A;- Original project: &apos;Spring-tx-xml&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Spring-tx-xml/src/com.NBdiMAN.dao&#x0D;&#x0A;     Spring-tx-xml/src/com.NBdiMAN.domain&#x0D;&#x0A;- Delete subpackages" description="Delete elements" element1="/src&lt;com.NBdiMAN.domain" element2="/src&lt;com.NBdiMAN.dao.impl" element3="/src&lt;com.NBdiMAN.dao" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1546769272765" subPackages="true" version="1.0"/>
+</session>

@@ -1,0 +1,39 @@
+package com.NBdiMAN.dao.impl;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.NBdiMAN.dao.IEmployeeDAO;
+import com.NBdiMAN.domain.Employee;
+@Repository
+public class EmployeeDAOImpl implements IEmployeeDAO{
+	
+	private JdbcTemplate jdbcTemplate;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public void save(Employee emp) {
+		System.out.println("保存员工");
+	}
+
+	public void update(Employee emp) {
+		System.out.println("更新员工");
+	}
+
+	public void delete(Long id) {
+		
+	}
+
+	public Employee get(Long id) {
+		return null;
+	}
+
+	public List<Employee> listAll() {
+		return null;
+	}
+
+}

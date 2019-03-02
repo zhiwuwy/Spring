@@ -1,0 +1,19 @@
+package com.NBdiMAN.log;
+
+import java.lang.reflect.Method;
+
+import org.springframework.cglib.proxy.InvocationHandler;
+
+public class LogAdvice implements InvocationHandler{
+
+	public <T> T getProxyObject() {
+		Enhancer enhancer = new Enhancer();
+		return null;
+	}
+	
+	@Override
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+		return null;
+	}
+	
+}

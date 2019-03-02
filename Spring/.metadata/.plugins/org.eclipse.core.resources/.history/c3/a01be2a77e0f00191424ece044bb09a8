@@ -1,0 +1,24 @@
+package com.NBdiMAN.log;
+
+import java.lang.reflect.Method;
+
+import org.springframework.cglib.proxy.Enhancer;
+import org.springframework.cglib.proxy.InvocationHandler;
+
+import com.NBdiMAN.domain.Employee;
+
+public class LogAdvice implements InvocationHandler{
+
+	public <T> T getProxyObject(Employee emp) {
+		Enhancer enhancer = new Enhancer();
+		enhancer.setSuperclass(emp.getClass());
+		enhancer.setCallback(this);
+		return (T) enhancer.create();
+	}
+	
+	@Override
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+		return null;
+	}
+	
+}

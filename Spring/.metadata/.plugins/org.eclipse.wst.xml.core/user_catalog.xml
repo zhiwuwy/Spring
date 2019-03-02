@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://www.springframework.org/schema/beans/spring-beans.xsd" uri="file:///E:/java-plugins/Spring/spring-framework-5.1.2.RELEASE/schema/beans/spring-beans.xsd"/>
+  <system systemId="http://www.springframework.org/schema/context/spring-context.xsd" uri="file:///E:/java-plugins/Spring/spring-framework-5.1.2.RELEASE/schema/context/spring-context.xsd"/>
+</catalog>

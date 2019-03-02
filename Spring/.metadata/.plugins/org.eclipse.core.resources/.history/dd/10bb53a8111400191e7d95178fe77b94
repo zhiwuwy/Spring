@@ -1,0 +1,33 @@
+package com.NBdiMAN;
+
+import javax.sql.DataSource;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.alibaba.druid.pool.DruidDataSource;
+
+//表示数据连接池的配置类
+@Configuration
+@PropertySource("classpath:db.properties")//使用这个注解可以导入配置文件
+public class DataSourceConfig {
+	
+	private String driverClassName;
+	
+	private String url;
+	
+	private String username;
+	
+	private String password;
+	
+	private String initialSize;
+	
+	//创建连接池对象
+	@Bean
+	public DataSource createDataSource() {
+		DruidDataSource dataSource = new DruidDataSource();
+		dataSource.get
+		return dataSource;
+	}
+}
